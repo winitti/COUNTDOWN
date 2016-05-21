@@ -4,19 +4,15 @@ score = 59
 highestscore = 78
 gamecounter = 0
 
+#remove this def game in the main code, i am just using random code for the game
+def game():
+    examplename = input('What is your name? ')
+    print ('Hello ', examplename, ", let's play!")
 
-gamecounter = gamecounter + 1
-examplename = input('What is your name? ')
-print ('Hello ', examplename, ", let's play!")
-print ('You have played the game ', gamecounter, 'times')
-print ('Your score was.. ', score,'. The highest score was... ', highestscore)
-wouldyouliketoplayagain = input('You need to play the game 3 times, and you have played it ', gamecounter, 'times. Would you like to follow the rules? (You can always be a rebel and quit now) ')
-if (wouldyouliketoplayagain == 'yes'and gamecounter < 3):
-    print ('aight')
-if (wouldyouliketoplayagain == 'yes' and gamecounter >=3):
-    print ('You already have played this game more than three times!')
-
-
-    
+for i in range (0,3):
+    gamecounter = gamecounter + 1
+    game()
+    print ('You have played the game ', gamecounter, 'times')
+    print ('Your score was.. ', score,'. The highest score was... ', highestscore)
     
 
