@@ -1,6 +1,6 @@
 def menu():
     Name = input("Please enter your name")
-    print("Hello",Name,"welcome to my game")
+    print("Hello",Name,"welcome to COUNTDOWN!")
     endOfGame = False
     while endOfGame == False:
         print("Press 1 to play")
