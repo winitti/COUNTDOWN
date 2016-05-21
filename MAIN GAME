@@ -1,8 +1,5 @@
 import random
-
-
-
-
+import time
 
 
 
@@ -34,6 +31,35 @@ for i in range (0,9):
             numberOfVowels = numberOfVowels + 1
         elif (anyLetter == '0' and numberOfVowels > 3):
             print ('You cannot add anymore vowels! ')
-    
-        
     print (letters)
+    
+def main():
+    x = len(word)
+    if x == 9:
+        score = score + 18
+    else:
+        score = score + len(word)
+main()
+
+def time():
+    print("Your time starts...")
+    time.sleep(2)
+    print("Now!")
+    time.sleep(10)
+    print("20 seconds left")
+    time.sleep(10)
+    print("10 seconds left")
+    time.sleep(5)
+    print("5 seconds left")
+    time.sleep(1)
+    print("4 seconds left")
+    time.sleep(1)
+    print("3 seconds left")
+    time.sleep(1)
+    print("2 seconds left")
+    time.sleep(1)
+    print("1 second left")
+    time.sleep(1)
+    print("Times up")
+
+time()
