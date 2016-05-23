@@ -20,8 +20,6 @@ def menu():
         
 
 
-
-
 def giveLetters():
     consonants = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N','P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y',' Z']
     vowels = ['A', 'E', 'I', 'O', 'U',]
@@ -48,6 +46,7 @@ def giveLetters():
             elif (anyLetter == '0' and numberOfVowels > 3):
                 print ('You cannot add anymore vowels! ')
         print (letters)
+        return letters 
     
 def countScore():
     x = len(word)
