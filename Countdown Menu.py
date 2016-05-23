@@ -1,6 +1,6 @@
 import time
 def menu():
-    Name = input("Please enter your name")
+    Name = input("Please enter your name ")
     print("Hello",Name,"welcome to COUNTDOWN!")
     time.sleep(2)
     endOfGame = False
