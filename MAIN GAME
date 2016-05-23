@@ -49,13 +49,13 @@ def giveLetters():
                 print ('You cannot add anymore vowels! ')
         print (letters)
     
-def main():
+def countScore():
     x = len(word)
     if x == 9:
         score = score + 18
     else:
         score = score + len(word)
-main()
+countScore()
 
 def time():
     print("Your time starts...")
