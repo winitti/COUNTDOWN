@@ -81,13 +81,22 @@ def time():
 time()
 
 
+def runningthegame():
+    gamecounter = 0
+    for i in range (0,3):
+        gamecounter = gamecounter + 1
+        game()
+        print ('You have played the game ', gamecounter, 'times')
+        print ('Your score was.. ', score,'. The highest score was... ', highestscore)
+
+runningthegame()
 
 
-for i in range (0,3):
-    gamecounter = gamecounter + 1
-    playGame()
-    print ('You have played the game ', gamecounter, 'times')
-    print ('Your score was.. ', score,'. The highest score was... ', highestscore)
+wouldyouliketoplayagain = input('Would you like to play the game again? ')
+if wouldyouliketoplayagain == 'yes':
+    runningthegame()
+if wouldyouliketoplayagain == 'no':
+    break
     
 
 menu()
