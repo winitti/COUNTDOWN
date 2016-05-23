@@ -17,16 +17,14 @@ def runningthegame():
         print ('You have played the game ', gamecounter, 'times')
         print ('Your score was.. ', score,'. The highest score was... ', highestscore)
 
-def main():
-    runningthegame()
+runningthegame()
 
-main()
 
 wouldyouliketoplayagain = input('Would you like to play the game again? ')
 if wouldyouliketoplayagain == 'yes':
-    main()
+    runningthegame()
 if wouldyouliketoplayagain == 'no':
-    print ('aight')
+    break
   
 
 
