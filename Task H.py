@@ -9,10 +9,24 @@ def game():
     examplename = input('What is your name? ')
     print ('Hello ', examplename, ", let's play!")
 
-for i in range (0,3):
-    gamecounter = gamecounter + 1
-    game()
-    print ('You have played the game ', gamecounter, 'times')
-    print ('Your score was.. ', score,'. The highest score was... ', highestscore)
-    
+def runningthegame():
+    gamecounter = 0
+    for i in range (0,3):
+        gamecounter = gamecounter + 1
+        game()
+        print ('You have played the game ', gamecounter, 'times')
+        print ('Your score was.. ', score,'. The highest score was... ', highestscore)
+
+def main():
+    runningthegame()
+
+main()
+
+wouldyouliketoplayagain = input('Would you like to play the game again? ')
+if wouldyouliketoplayagain == 'yes':
+    main()
+if wouldyouliketoplayagain == 'no':
+    print ('aight')
+  
+
 
