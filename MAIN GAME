@@ -60,7 +60,7 @@ def menu():
         time.sleep(2)
         anyInput = input("Please choose an option ")
         if anyInput == '1':
-            game()
+            runningthegame()
         else:
             print("Bye!")
             endOfGame = True
@@ -92,7 +92,7 @@ def giveLetters():
                 numberOfVowels = numberOfVowels + 1
             elif (anyLetter == '0' and numberOfVowels > 3):
                 print ('You cannot add anymore vowels! ')
-        print (letters)
+        print ('Your letters are.. ', letters)
         return letters 
     
 def countScore():
@@ -101,9 +101,12 @@ def countScore():
         score = score + 18
     else:
         score = score + len(word)
-countScore()
 
 def time():
+    print ("You need to create a word with your letters. You are given a point for each letter you use, but if you use all 9 letters you get double points.)
+    time.sleep(2)
+    print ("Are you ready? ")
+    time.sleep(2)
     print("Your time starts...")
     time.sleep(2)
     print("Now!")
@@ -122,9 +125,9 @@ def time():
     time.sleep(1)
     print("1 second left")
     time.sleep(1)
-    print("Times up")
+    print("Times up! ")
+    word = input('What is your word? ')
 
-time()
 
 
 def runningthegame():
@@ -133,18 +136,21 @@ def runningthegame():
         gamecounter = gamecounter + 1
         game()
         print ('You have played the game ', gamecounter, 'times')
-        print ('Your score was.. ', score,'. The highest score was... ', highestscore)
+        print ('Your score was.. ', score,)
+        
 
-runningthegame()
-
+def game():
+    giveLetters()
+    time()
+    checkWord(word,englishWords)
+    countScore()
+    print('Your score is... ', score)
+    
+menu()
 
 wouldyouliketoplayagain = input('Would you like to play the game again? ')
 if wouldyouliketoplayagain == 'yes':
-    runningthegame()
+    menu()
 if wouldyouliketoplayagain == 'no':
     break
-    
-def game():
-    getLetters = giveLetters()
 
-menu()
